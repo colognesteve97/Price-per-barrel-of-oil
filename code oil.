@@ -1,0 +1,6 @@
+async function fetchOilPrice() {
+  const response = await fetch('https://api.oilpriceapi.com/v1/prices/latest');
+  const data = await response.json();
+  const oilPrice = data.data[0].price;
+  return oilPrice;
+}
